@@ -30,6 +30,7 @@ def main():
         print("Invalid interest type selected.")
         return
 
+    print("")
     print(f"\nResults after {years} years:")
     print(f"Total Interest Earned: R{interest:.2f}")
     print(f"Final Value of Investment: R{final_value:.2f}")
