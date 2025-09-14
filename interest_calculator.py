@@ -16,19 +16,21 @@ def calculate_compound_interest(principal, annual_rate, years, monthly_contribut
 
 def main():
     print("Interest Calculator")
-    interest_type = input("Choose interest type (simple/compound): ").strip().lower()
+    print("")
+    interest_type = input("Choose interest type (simple [1] or compound [2]): ").strip().lower()
     principal = float(input("Enter initial deposit amount: R"))
     annual_rate = float(input("Enter annual interest rate (e.g., 6.5 for 6.5%): ")) / 100
     years = int(input("Enter investment duration in years: "))
     monthly_contribution = float(input("Enter monthly contribution amount (R0 if none): R"))
 
-    if interest_type == "simple":
+    if interest_type == "1":
         interest, final_value = calculate_simple_interest(principal, annual_rate, years, monthly_contribution)
-    elif interest_type == "compound":
+    elif interest_type == "2":
         interest, final_value = calculate_compound_interest(principal, annual_rate, years, monthly_contribution)
     else:
         print("Invalid interest type selected.")
         return
+
 
     print("")
     print(f"\nResults after {years} years:")
